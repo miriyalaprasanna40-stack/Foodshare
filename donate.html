@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+< lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Donate Food - FoodShare</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+
+        <div class="logo">
+            🍱 FoodShare
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="donate.html">Donate Food</a>
+            <a href="available.html">Available Food</a>
+        </div>
+
+    </nav>
+
+
+    <!-- Donation Form -->
+    <section class="donate-section">
+
+        <h1>🍱 Donate Food</h1>
+
+        <p>
+            Have extra food? Share it with someone who needs it.
+        </p>
+
+
+        <form id="donationForm">
+
+            <label for="donorName">Donor Name</label>
+
+            <input
+                type="text"
+                id="donorName"
+                placeholder="Enter your name"
+                required
+            >
+
+
+            <label for="foodName">Food Name</label>
+
+            <input
+                type="text"
+                id="foodName"
+                placeholder="Example: Vegetable Biryani"
+                required
+            >
+
+
+            <label for="quantity">Quantity</label>
+
+            <input
+                type="text"
+                id="quantity"
+                placeholder="Example: 10 plates"
+                required
+            >
+
+
+            <label for="foodType">Food Type</label>
+
+            <select id="foodType" required>
+
+                <option value="">
+                    Select food type
+                </option>
+
+                <option value="Vegetarian">
+                    Vegetarian
+                </option>
+
+                <option value="Non-Vegetarian">
+                    Non-Vegetarian
+                </option>
+
+                <option value="Vegan">
+                    Vegan
+                </option>
+
+                <option value="Other">
+                    Other
+                </option>
+
+            </select>
+
+
+            <label for="location">Pickup Location</label>
+
+            <input
+                type="text"
+                id="location"
+                placeholder="Enter pickup location"
+                required
+            >
+<button type="button" onclick="getCurrentLocation()">
+    📍 Use Current Location
+</button>
+
+            <label for="expiry">Best Before</label>
+
+            <input
+                type="datetime-local"
+                id="expiry"
+                required
+            >
+
+
+            <label for="contact">Contact Number</label>
+
+            <input
+                type="tel"
+                id="contact"
+                placeholder="Enter contact number"
+                required
+            >
+
+
+            <label for="description">
+                Additional Information
+            </label>
+
+            <textarea
+                id="description"
+                rows="4"
+                placeholder="Enter any additional information"
+            ></textarea>
+
+
+            <button type="submit">
+                ❤️ Submit Donation
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 FoodShare | Food Donation Platform
+        </p>
+
+    </footer>
+<script>
+function getCurrentLocation() {
+
+    if (!navigator.geolocation) {
+        alert("Location is not supported by this browser.");
+        return;
+    }
+
+    navigator.geolocation.getCurrentPosition(
+        function(position) {
+
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+
+            document.getElementById("location").value =
+                "Latitude: " + latitude.toFixed(6) +
+                ", Longitude: " + longitude.toFixed(6);
+        },
+
+        function(error) {
+            alert("Please allow location permission in your browser.");
+        }
+    );
+}
+              </script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

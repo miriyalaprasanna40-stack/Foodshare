@@ -1,0 +1,334 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f7faf7;
+    color: #222;
+}
+
+
+/* NAVIGATION */
+
+.navbar {
+    background: #2e7d32;
+    color: white;
+    padding: 18px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+
+/* HOME */
+
+.hero {
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+
+    background: linear-gradient(
+        rgba(46, 125, 50, 0.85),
+        rgba(76, 175, 80, 0.85)
+    );
+}
+
+.hero-content {
+    max-width: 700px;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 19px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    background: white;
+    color: #2e7d32;
+    padding: 14px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn.secondary {
+    background: #1b5e20;
+    color: white;
+}
+
+
+/* HOW IT WORKS */
+
+.how-it-works {
+    padding: 60px 6%;
+    text-align: center;
+}
+
+.how-it-works h2 {
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    width: 280px;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 12px;
+    color: #2e7d32;
+}
+
+.card p {
+    line-height: 1.5;
+    color: #555;
+}
+
+
+/* DONATE PAGE */
+
+.donate-section {
+    max-width: 650px;
+    margin: 40px auto;
+    padding: 35px 25px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.donate-section h1 {
+    text-align: center;
+    color: #2e7d32;
+    margin-bottom: 10px;
+}
+
+.donate-section > p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+#donationForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#donationForm label {
+    margin-top: 15px;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+#donationForm input,
+#donationForm select,
+#donationForm textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+}
+
+#donationForm input:focus,
+#donationForm select:focus,
+#donationForm textarea:focus {
+    outline: none;
+    border-color: #2e7d32;
+}
+
+#donationForm button {
+    margin-top: 25px;
+    padding: 14px;
+    border: none;
+    border-radius: 9px;
+    background: #2e7d32;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#successMessage {
+    margin-top: 20px;
+    text-align: center;
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+
+/* AVAILABLE FOOD */
+
+.available-section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.available-section h1 {
+    color: #2e7d32;
+    margin-bottom: 10px;
+}
+
+.available-section > p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+#foodList {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.food-card {
+    width: 100%;
+    max-width: 500px;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: left;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #2e7d32;
+}
+
+.food-card h2 {
+    color: #2e7d32;
+    margin-bottom: 20px;
+}
+
+.food-card p {
+    margin: 10px 0;
+    line-height: 1.5;
+    color: #444;
+}
+
+.food-card button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    background: #2e7d32;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.no-food {
+    color: #777;
+    font-size: 17px;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #1b5e20;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .hero {
+        min-height: 450px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .donate-section {
+        margin: 25px 15px;
+        padding: 25px 18px;
+    }
+
+    .available-section {
+        margin: 25px 10px;
+    }
+}
